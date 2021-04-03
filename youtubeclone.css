@@ -1,0 +1,246 @@
+:root {
+  /*color*/
+  --white-color: #fff;
+  --black-color: #000000;
+  --red-color: #ff0000;
+  --blue-color: #1565c0;
+  --grey-color: #909090;
+  --grey-light-color: #cfd8dc;
+
+  /*avatarsize*/
+  --avatar-size: 2rem;
+  --padding: 16px;
+
+  /*fontsize*/
+  --font-large: 16px;
+  --font-medium: 14px;
+  --font-small: 12px;
+  --font-micro: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: roboto;
+}
+
+ul {
+  list-style: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: var(--white-color);
+}
+
+/*header*/
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--padding);
+  background-color: var(--black-color);
+  color: var(--white-color);
+}
+
+.header .logo {
+  font-size: large;
+}
+
+.header .logo i {
+  color: var(--red-color);
+}
+
+.header .icons i {
+  padding-left: var(--padding);
+}
+
+/*player*/
+.player video {
+  width: 100%;
+  height: 100%;
+  max-width: 768px;
+}
+
+.player {
+  text-align: center;
+  background-color: var(--black-color);
+}
+
+/*info*/
+.info {
+  padding: var(--padding);
+}
+
+.info .hashtags {
+  display: flex;
+  color: var(--blue-color);
+  font-size: var(--font-small);
+}
+
+.info .hashtags li {
+  padding-right: var(--padding);
+}
+
+.info .title .maintitle {
+  display: flex;
+}
+
+.info .title .maintitle .main {
+  font-size: var(--font-medium);
+}
+
+.info .title .maintitle .main.clamp {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 라인수 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.info .title .maintitle button {
+  height: 100%;
+}
+
+.info .title .views {
+  font-size: var(--font-small);
+  color: var(--grey-color);
+}
+
+.info .infoicons {
+  display: flex;
+  justify-content: space-around;
+  padding: var(--padding);
+}
+
+.info .infoicons button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: var(--font-small);
+  color: var(--grey-color);
+}
+
+.info .infoicons button i {
+  margin-bottom: calc(var(--padding) / 2);
+  font-size: 1rem;
+}
+
+.info .infoicons button i.active {
+  color: var(--blue-color);
+}
+
+.info .subscribe {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid var(--grey-light-color);
+  border-bottom: 1px solid var(--grey-light-color);
+  padding: var(--padding);
+}
+
+.info .subscribe img {
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+}
+
+.info .subscribe .myself {
+  display: flex;
+  justify-content: space-between;
+}
+
+.info .subscribe .myself .namesubscribers {
+  margin-left: calc(var(--padding) / 2);
+  display: flex;
+  flex-direction: column;
+}
+
+.info .subscribe .myself .namesubscribers .name {
+  font-size: var(--font-medium);
+}
+
+.info .subscribe .myself .namesubscribers .subscribers {
+  font-size: var(--font-small);
+  color: var(--grey-color);
+}
+
+.info .subscribe .subscribe {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: var(--red-color);
+  font-size: var(--font-large);
+  border: none;
+  padding: 0;
+}
+
+.upNext .upNextTitle {
+  padding: var(--padding);
+  color: var(--grey-color);
+}
+
+.upNext .contents {
+  padding: calc(var(--padding) / 2) var(--padding);
+  display: flex;
+}
+
+.upNext .contents .img {
+  flex: 1 1 35%;
+  margin-right: calc(var(--padding) / 2);
+}
+
+.upNext .contents img {
+  width: 100%;
+}
+
+.upNext .contents .contentmain {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 60%;
+}
+
+.upNext .contents .contenttitle {
+  font-size: var(--font-small);
+}
+
+.upNext .contents .contentname {
+  font-size: var(--font-micro);
+  color: var(--grey-color);
+}
+
+.upNext .contents .contentviews {
+  font-size: var(--font-micro);
+  color: var(--grey-color);
+}
+
+.upNext .contents i {
+  height: 100%;
+  padding: calc(var(--padding) / 2);
+  font-size: var(--font-small);
+  flex: 1 1 5%;
+}
+
+.infoupNext {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .infoupNext {
+    flex-direction: row;
+  }
+
+  .info {
+    flex: 1 1 50%;
+  }
+
+  .upNext {
+    margin: var(--padding) 0;
+    flex: 1 1 50%;
+  }
+}
